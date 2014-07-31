@@ -1,0 +1,16 @@
+{% if user.is_authenticated %}
+<h1>I'd say... hello {{ user.username }}!</h1>
+{% else %}
+<h1>... hello world!</h1>
+{% endif %}
+
+{% if user.is_authenticated %}
+<a href="/listing/restricted/">Restricted Page</a><br />
+<a href="/listing/logout/">Logout</a><br />
+{% else %}
+<a href="/listing/register/">Register Here</a><br />
+<a href="/listing/login/">Login</a><br />
+{% endif %}
+
+<a href="/listing/about/">About</a><br/>
+<a href="/listing/add_category/">Add a New Category</a><br />
